@@ -3,13 +3,13 @@
         <v-row>
             <v-textarea
                 label="Child"
-                v-model="childFirldComputed"
+                v-model="childFieldComputed"
             />
         </v-row>
 
         <v-row>
             <GrandChild
-                v-bind:grandchild-firld.sync="childFirldComputed"
+                v-bind:grandchild-field.sync="childFieldComputed"
             />
         </v-row>
     </v-container>
@@ -23,15 +23,15 @@ export default {
         GrandChild
     },
     props: {
-        childFirld: null
+        childField: null
     },
     computed: {
-        childFirldComputed: {
+        childFieldComputed: {
             get () {
-                return this.childFirld
+                return this.childField
             },
             set (value) {
-                this.$emit('update:childFirld', value)
+                this.$emit('update:childField', value)
             }
         }
     }

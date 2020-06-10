@@ -1,22 +1,22 @@
 <template>
     <v-textarea
         label="Grandchild"
-        v-model="grandchildFirldComputed"
+        v-model="grandchildFieldComputed"
     />
 </template>
 
 <script>
 export default {
     props: {
-        grandchildFirld: null
+        grandchildField: null
     },
     computed: {
-        grandchildFirldComputed: {
+        grandchildFieldComputed: {
             get () {
-                return this.grandchildFirld
+                return this.grandchildField
             },
             set (value) {
-                this.$emit('update:grandchildFirld', value)
+                this.$emit('update:grandchildField', value)
             }
         }
     }
