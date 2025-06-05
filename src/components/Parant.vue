@@ -9,7 +9,7 @@
 
         <v-row>
             <Child
-                v-bind:child-field.sync="fieldComputed"
+                v-model:child-field="fieldComputed"
             />
         </v-row>
     </v-container>
@@ -31,7 +31,7 @@ export default {
                 return this.field
             },
             set (value) {
-                this.field =value
+                this.field = value
             }
         }
     }

@@ -8,7 +8,10 @@
 <script>
 export default {
     props: {
-        grandchildField: null
+        grandchildField: {
+            type: String,
+            default: null
+        }
     },
     computed: {
         grandchildFieldComputed: {
@@ -16,7 +19,7 @@ export default {
                 return this.grandchildField
             },
             set (value) {
-                this.$emit('update:grandchildField', value)
+                this.$emit('update:grandchild-field', value)
             }
         }
     }

@@ -9,7 +9,7 @@
 
         <v-row>
             <GrandChild
-                v-bind:grandchild-field.sync="childFieldComputed"
+                v-model:grandchild-field="childFieldComputed"
             />
         </v-row>
     </v-container>
@@ -23,7 +23,10 @@ export default {
         GrandChild
     },
     props: {
-        childField: null
+        childField: {
+            type: String,
+            default: null
+        }
     },
     computed: {
         childFieldComputed: {
@@ -31,7 +34,7 @@ export default {
                 return this.childField
             },
             set (value) {
-                this.$emit('update:childField', value)
+                this.$emit('update:child-field', value)
             }
         }
     }

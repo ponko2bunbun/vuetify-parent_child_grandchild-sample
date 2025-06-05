@@ -1,14 +1,14 @@
 <template>
     <v-app>
-        <v-content>
-            <v-container pa-0>
+        <v-main>
+            <v-container class="pa-0">
                 <v-row>
                     <v-col>
                         <Parant/>
                     </v-col>
                 </v-row>
             </v-container>
-        </v-content>
+        </v-main>
     </v-app>
 </template>
 
